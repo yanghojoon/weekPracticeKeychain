@@ -42,6 +42,9 @@
                                         <rect key="frame" x="0.0" y="49" width="374" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="새로운 비밀번호 등록"/>
+                                        <connections>
+                                            <action selector="touchUpInsideRegisterPasswordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PTS-eY-61S"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p53-ky-KSm">
                                         <rect key="frame" x="0.0" y="98" width="374" height="31"/>
@@ -80,6 +83,9 @@
                             <constraint firstItem="i3W-Ee-Vg3" firstAttribute="top" secondItem="WcA-hp-w7I" secondAttribute="bottom" constant="23" id="zvH-t6-OcP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="i3W-Ee-Vg3" id="nAj-78-i0m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

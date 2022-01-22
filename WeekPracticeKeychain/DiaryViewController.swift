@@ -13,7 +13,6 @@ class DiaryViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    
     @IBAction func touchUpInsideLockButton(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
