@@ -15,6 +15,8 @@
 		DEA37EDB279C0D110020637D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA37ED9279C0D110020637D /* LaunchScreen.storyboard */; };
 		DEA37EE3279C0FD50020637D /* Diary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA37EE2279C0FD50020637D /* Diary.storyboard */; };
 		DEA37EE7279C10850020637D /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA37EE6279C10850020637D /* DiaryViewController.swift */; };
+		DEA37EE9279C13030020637D /* PasswordChange.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA37EE8279C13030020637D /* PasswordChange.storyboard */; };
+		DEA37EEB279C14EA0020637D /* PasswordChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA37EEA279C14EA0020637D /* PasswordChangeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		DEA37EDC279C0D110020637D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEA37EE2279C0FD50020637D /* Diary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Diary.storyboard; sourceTree = "<group>"; };
 		DEA37EE6279C10850020637D /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
+		DEA37EE8279C13030020637D /* PasswordChange.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PasswordChange.storyboard; sourceTree = "<group>"; };
+		DEA37EEA279C14EA0020637D /* PasswordChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +68,9 @@
 				DEA37ED0279C0D110020637D /* SceneDelegate.swift */,
 				DEA37ED2279C0D110020637D /* ViewController.swift */,
 				DEA37EE6279C10850020637D /* DiaryViewController.swift */,
+				DEA37EEA279C14EA0020637D /* PasswordChangeViewController.swift */,
 				DEA37ED4279C0D110020637D /* Main.storyboard */,
+				DEA37EE8279C13030020637D /* PasswordChange.storyboard */,
 				DEA37EE2279C0FD50020637D /* Diary.storyboard */,
 				DEA37ED7279C0D110020637D /* Assets.xcassets */,
 				DEA37ED9279C0D110020637D /* LaunchScreen.storyboard */,
@@ -135,6 +141,7 @@
 				DEA37EDB279C0D110020637D /* LaunchScreen.storyboard in Resources */,
 				DEA37ED8279C0D110020637D /* Assets.xcassets in Resources */,
 				DEA37ED6279C0D110020637D /* Main.storyboard in Resources */,
+				DEA37EE9279C13030020637D /* PasswordChange.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +154,7 @@
 			files = (
 				DEA37EE7279C10850020637D /* DiaryViewController.swift in Sources */,
 				DEA37ED3279C0D110020637D /* ViewController.swift in Sources */,
+				DEA37EEB279C14EA0020637D /* PasswordChangeViewController.swift in Sources */,
 				DEA37ECF279C0D110020637D /* AppDelegate.swift in Sources */,
 				DEA37ED1279C0D110020637D /* SceneDelegate.swift in Sources */,
 			);

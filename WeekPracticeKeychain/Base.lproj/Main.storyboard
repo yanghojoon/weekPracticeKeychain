@@ -47,6 +47,9 @@
                                         <rect key="frame" x="0.0" y="98" width="374" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="기존 비밀번호 변경"/>
+                                        <connections>
+                                            <action selector="touchUpInsideChangePasswordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MHQ-l4-iMh"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -77,11 +80,6 @@
                             <constraint firstItem="i3W-Ee-Vg3" firstAttribute="top" secondItem="WcA-hp-w7I" secondAttribute="bottom" constant="23" id="zvH-t6-OcP"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="changePasswordButton" destination="p53-ky-KSm" id="Las-kB-ZOc"/>
-                        <outlet property="lookDiaryButton" destination="ode-BZ-oh7" id="iFd-0p-FDW"/>
-                        <outlet property="registerNewPasswordButton" destination="opm-rd-Hgj" id="MQa-5G-sfQ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

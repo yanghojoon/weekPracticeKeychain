@@ -8,21 +8,27 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var lookDiaryButton: UIButton!
-    @IBOutlet weak var registerNewPasswordButton: UIButton!
-    @IBOutlet weak var changePasswordButton: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
     @IBAction func touchUpInsideLookDiaryButton(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "Diary", bundle: nil)
-        let diaryViewController = storyboard.instantiateViewController(withIdentifier: "Diary")
+        presentViewController(of: "Diary", style: .fullScreen)
+    }
+    
+    @IBAction func touchUpInsideChangePasswordButton(_ sender: Any) {
+        presentViewController(of: "PasswordChange", style: .formSheet)
+    }
+    
+    private func presentViewController(of identifier: String, style: UIModalPresentationStyle) {
+        let storyboard = UIStoryboard(name: "\(identifier)", bundle: nil)
+        let diaryViewController = storyboard.instantiateViewController(
+            withIdentifier: "\(identifier)"
+        )
+        diaryViewController.modalPresentationStyle = style
         
         present(diaryViewController, animated: true, completion: nil)
     }
-    
 }
 
