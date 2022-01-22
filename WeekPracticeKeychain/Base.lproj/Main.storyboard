@@ -34,6 +34,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="일기장 보기"/>
+                                        <connections>
+                                            <action selector="touchUpInsideLookDiaryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IER-WZ-zO9"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="opm-rd-Hgj">
                                         <rect key="frame" x="0.0" y="49" width="374" height="31"/>
@@ -74,6 +77,11 @@
                             <constraint firstItem="i3W-Ee-Vg3" firstAttribute="top" secondItem="WcA-hp-w7I" secondAttribute="bottom" constant="23" id="zvH-t6-OcP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="changePasswordButton" destination="p53-ky-KSm" id="Las-kB-ZOc"/>
+                        <outlet property="lookDiaryButton" destination="ode-BZ-oh7" id="iFd-0p-FDW"/>
+                        <outlet property="registerNewPasswordButton" destination="opm-rd-Hgj" id="MQa-5G-sfQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

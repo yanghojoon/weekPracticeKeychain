@@ -14,6 +14,7 @@
 		DEA37ED8279C0D110020637D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEA37ED7279C0D110020637D /* Assets.xcassets */; };
 		DEA37EDB279C0D110020637D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA37ED9279C0D110020637D /* LaunchScreen.storyboard */; };
 		DEA37EE3279C0FD50020637D /* Diary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA37EE2279C0FD50020637D /* Diary.storyboard */; };
+		DEA37EE7279C10850020637D /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA37EE6279C10850020637D /* DiaryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		DEA37EDA279C0D110020637D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEA37EDC279C0D110020637D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEA37EE2279C0FD50020637D /* Diary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Diary.storyboard; sourceTree = "<group>"; };
+		DEA37EE6279C10850020637D /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				DEA37ECE279C0D110020637D /* AppDelegate.swift */,
 				DEA37ED0279C0D110020637D /* SceneDelegate.swift */,
 				DEA37ED2279C0D110020637D /* ViewController.swift */,
+				DEA37EE6279C10850020637D /* DiaryViewController.swift */,
 				DEA37ED4279C0D110020637D /* Main.storyboard */,
 				DEA37EE2279C0FD50020637D /* Diary.storyboard */,
 				DEA37ED7279C0D110020637D /* Assets.xcassets */,
@@ -142,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEA37EE7279C10850020637D /* DiaryViewController.swift in Sources */,
 				DEA37ED3279C0D110020637D /* ViewController.swift in Sources */,
 				DEA37ECF279C0D110020637D /* AppDelegate.swift in Sources */,
 				DEA37ED1279C0D110020637D /* SceneDelegate.swift in Sources */,
