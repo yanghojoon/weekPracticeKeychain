@@ -19,6 +19,7 @@
 		DEA37EEB279C14EA0020637D /* PasswordChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA37EEA279C14EA0020637D /* PasswordChangeViewController.swift */; };
 		DEA37EED279C16FC0020637D /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA37EEC279C16FC0020637D /* Keychain.swift */; };
 		DEA37EEF279C1EB60020637D /* KeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA37EEE279C1EB60020637D /* KeychainError.swift */; };
+		DEA37EF1279C40AF0020637D /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA37EF0279C40AF0020637D /* UIViewController+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		DEA37EEA279C14EA0020637D /* PasswordChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeViewController.swift; sourceTree = "<group>"; };
 		DEA37EEC279C16FC0020637D /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		DEA37EEE279C1EB60020637D /* KeychainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainError.swift; sourceTree = "<group>"; };
+		DEA37EF0279C40AF0020637D /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				DEA37ED7279C0D110020637D /* Assets.xcassets */,
 				DEA37ED9279C0D110020637D /* LaunchScreen.storyboard */,
 				DEA37EDC279C0D110020637D /* Info.plist */,
+				DEA37EF0279C40AF0020637D /* UIViewController+extension.swift */,
 			);
 			path = WeekPracticeKeychain;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEA37EF1279C40AF0020637D /* UIViewController+extension.swift in Sources */,
 				DEA37EE7279C10850020637D /* DiaryViewController.swift in Sources */,
 				DEA37EEF279C1EB60020637D /* KeychainError.swift in Sources */,
 				DEA37ED3279C0D110020637D /* ViewController.swift in Sources */,

@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         var query: [String: Any] = [ // query 질의 -> 물어보는 것. 듣는 쪽은 키체인이고 말하는 것은 우리
             kSecClass as String: kSecClassGenericPassword,
             kSecMatchLimit as String: kSecMatchLimitOne,
-            kSecReturnAttributes as String: true,
+            kSecReturnAttributes as String: true, // 얘를 왜 넣어줘야 되는 걸까?
             kSecReturnData as String: true
         ]
         guard let inputPassword = passwordTextField.text else { return }
@@ -72,15 +72,3 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController {
-    func showAlert(message: String) {
-        let alert = UIAlertController(
-            title: "비밀번호 오류",
-            message: message,
-            preferredStyle: .alert
-        )
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alert.addAction(okAction)
-        present(alert, animated: true, completion: nil)
-    }
-}
