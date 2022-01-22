@@ -18,13 +18,30 @@ class ViewController: UIViewController {
     @IBAction func touchUpInsideLookDiaryButton(_ sender: UIButton) {
         var query: [String: Any] = [ // query 질의 -> 물어보는 것. 듣는 쪽은 키체인이고 말하는 것은 우리
             kSecClass as String: kSecClassGenericPassword,
+            kSecMatchLimit as String: kSecMatchLimitOne,
+            kSecReturnAttributes as String: true,
             kSecReturnData as String: true
         ]
-//        guard inputPassword == SecItemCopyMatching(<#T##query: CFDictionary##CFDictionary#>, <#T##result: UnsafeMutablePointer<CFTypeRef?>?##UnsafeMutablePointer<CFTypeRef?>?#>)
+        guard let inputPassword = passwordTextField.text else { return }
+        
+        var item: CFTypeRef?
+        let status = SecItemCopyMatching(query as CFDictionary, &item) // item의 reference를 넘겨줌 결과도 item의 reference로
+        guard status != errSecItemNotFound else {
+            return
+            showAlert(message: "비밀번호 생성해줘")
+        }
+        guard let existingItem = item as? [String:Any],
+              let passwordData = existingItem[kSecValueData as String] as? Data,
+              let originPassword = String(data: passwordData, encoding: .utf8),
+              inputPassword == originPassword else {
+                  showAlert(message: "다른 사람의 일기장을 보면 안돼 🖐🏻")
+                  return
+              }
+        
         presentViewController(of: "Diary", style: .fullScreen)
     }
     
-    @IBAction func touchUpInsideRegisterPasswordButton(_ sender: UIButton) { // 이미 등록한 것에 대해선 수정이나 삭제를 하고 등록해야 함. account와 password 둘 다 있을 때 비번만 수정해도 다시 실행 안됨 ios에서 keychain이 하나 밖에 없다. 번들 단위(앱 하나)로 키체인이 작동한다. 같은
+    @IBAction func touchUpInsideRegisterPasswordButton(_ sender: UIButton) { // 이미 등록한 것에 대해선 수정이나 삭제를 하고 등록해야 함. account와 password 둘 다 있을 때 비번만 수정해도 다시 실행 안됨 ios에서 keychain이 하나 밖에 없다. 번들 단위(앱 하나)로 키체인이 작동한다. keychain이 하나라는 것은 ios가 훨씬 엄격하다는 것 운영체제를 해킹하지 않는 한 keychain에 접근할 수 없다.
         guard let inputPassword = passwordTextField.text else { return }
         let credential = Keychain.Credentials(password: inputPassword) // 암호화된 정보가 Data
         guard let password = credential.password.data(using: .utf8) else { return }
@@ -56,10 +73,10 @@ class ViewController: UIViewController {
 }
 
 extension ViewController {
-    func showAlert() {
+    func showAlert(message: String) {
         let alert = UIAlertController(
-            title: "비밀번호가 틀렸습니다.",
-            message: "다른 사람의 일기장을 보면 안돼 🖐🏻",
+            title: "비밀번호 오류",
+            message: message,
             preferredStyle: .alert
         )
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
